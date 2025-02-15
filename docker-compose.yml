@@ -1,25 +1,4 @@
 version: "3.9"
 services:
   web:
-    image: mcr.microsoft.com/dotnet/samples/aspnetapp:6.0
-    ports:
-      - "8080"  # Important: Just the container port for App Platform
-    depends_on:
-      - redis
-    environment:
-      ASPNETCORE_URLS: http://+:80
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      REDIS_PASSWORD: ${REDIS_PASSWORD} # Use environment variable
-    restart: always
-
-  redis:
-    image: redis:latest
-    volumes:
-      - redis_data:/data
-    environment:
-      REDIS_PASSWORD: ${REDIS_PASSWORD} # Use environment variable
-    restart: always
-
-volumes:
-  redis_data:
+    image: nginx:latest  # Use a very simple image for testing
