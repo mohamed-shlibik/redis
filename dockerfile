@@ -13,4 +13,4 @@ ENV REDIS_PORT=6379
 ENV REDIS_PASSWORD=welcome01
 
 # Run the application
-ENTRYPOINT ["dotnet", "YourApp.dll"]
+ENTRYPOINT ["dotnet", "testNET.dll"]
